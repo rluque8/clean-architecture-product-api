@@ -1,4 +1,5 @@
 import express, { Application, Router } from "express";
+import "dotenv/config";
 
 export class Server {
   private app: Application;
