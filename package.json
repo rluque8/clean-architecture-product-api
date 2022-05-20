@@ -1,0 +1,24 @@
+{
+  "name": "fintonic-product-api",
+  "version": "1.0.0",
+  "author": "Rodrigo Luque",
+  "description": "Project for Fintonic's hiring process",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rluque8/fintonic-product-api.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rluque8/fintonic-product-api/issues"
+  },
+  "homepage": "https://github.com/rluque8/fintonic-product-api#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
