@@ -81,6 +81,19 @@ Add the following configuration to you .vscode/launch.json file:
 }
 ```
 
+## To improve
+
+There are many features to be implemented in this project. Some of the most important ones are:
+
+- Infrastructure tests (repository).
+- Integration tests.
+- SWAGGER documentation.
+- Add a Dockerfile for a mongo instance.
+- Use Value Objects instead of Primitives.
+- More advanced authentication (by using a more sofisticated way)
+- More control over the request body (limit number of characters, etc)
+- Traceability (logging, error handling)
+
 ## Author
 
 Rodrigo Luque 
