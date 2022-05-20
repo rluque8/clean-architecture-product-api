@@ -7,8 +7,10 @@ export const authenticationMiddleware =
     const apiKey = req.get("api-key");
 
     if (validApiKey !== apiKey) {
-      res.sendStatus(HTTP_STATUS.UNAUTHORIZED);
+      res.status(HTTP_STATUS.UNAUTHORIZED).json({
+        error: "You don't have enough permissions to execute this operation"
+      });
+    } else { 
+      await next();
     }
-
-    await next();
   };

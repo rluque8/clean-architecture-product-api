@@ -1,5 +1,5 @@
 export class SchemaValidationError extends Error {
   constructor(message: string) {
-    super(message);
+    super(`Schema error on validation: ${message}`);
   }
 }

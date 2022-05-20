@@ -2,8 +2,18 @@ import { productCreateInteractor } from './../../application/interactors/depende
 import { Response, Request } from "express";
 import { Product } from "../../domain/product";
 import { HTTP_STATUS } from "../../../shared/domain/http-status";
+import Joi from 'joi';
 
 export class ProductCreateController {
+  static schema() {
+    return {
+      body: Joi.object({
+        id: Joi.string().required(),
+        name: Joi.string().required(),
+        description: Joi.string(),
+      }),
+    };
+  }
 
   async run(req: Request, res: Response): Promise<void> {
     try {

@@ -1,9 +1,10 @@
-import { Schema } from "joi";
+import { Request } from "express";
+import { ObjectSchema } from "joi";
 import { SchemaValidationError } from "../../domain/errors/schema-validation-error";
 
-export async function validateSchema(schema: Schema, payload: Record<string, unknown>) {
+export async function validateSchema(schema: ObjectSchema, req: Request) {
   try {
-    await schema.validateAsync(payload);
+    await schema.validateAsync(req);
   } catch (error) {
     if (error instanceof Error) {
       throw new SchemaValidationError(error.message);
