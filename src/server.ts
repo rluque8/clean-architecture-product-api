@@ -4,6 +4,8 @@ import helmet from "helmet";
 import bodyParser from "body-parser";
 import { connectDb } from "./modules/shared/infrastructure/connection";
 import { registerRoutes } from "./routes/router";
+import swaggerUi from "swagger-ui-express";
+import * as swaggerDocument from "../swagger.json";
 
 export class Server {
   private app: Application;
@@ -16,6 +18,7 @@ export class Server {
     const router = Router();
     this.app.use(router);
     registerRoutes(router);
+    this.initSwagger();
     connectDb(process.env.MONGODB_URL || "");
   }
 
@@ -26,6 +29,10 @@ export class Server {
         resolve();
       });
     });
+  }
+
+  private initSwagger() {
+    this.app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
   }
 
   private configureDefaultMiddlewares() {

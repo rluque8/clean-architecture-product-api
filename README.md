@@ -20,6 +20,8 @@ A **Product** has:
 
 This project was done using as database an instance of MongoDB.
 
+TO KNOW ALL THE DETAILS ABOUT THE DOCUMENTATION OF THE API, YOU CAN USE THE `/swagger` endpoint, which will show you a Swagger UI.
+
 ## Installation
 
 IMPORTANT! This project requires [Node.js](https://nodejs.org/) and MongoDB installed in your computer to run. 
@@ -61,6 +63,7 @@ In order to run the tests, execute the following command:
 ### VS Code
 
 Add the following configuration to you .vscode/launch.json file:
+(Change the node version if needed, this is for v16.14.2)
 
 ```json
 {
@@ -87,7 +90,7 @@ There are many features to be implemented in this project. Some of the most impo
 
 - Infrastructure tests (repository).
 - Integration tests.
-- SWAGGER documentation.
+- Improve SWAGGER documentation.
 - Add a Dockerfile for a mongo instance.
 - Use Value Objects instead of Primitives.
 - More advanced authentication (by using a more sofisticated way)
