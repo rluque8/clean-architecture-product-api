@@ -2,6 +2,7 @@ import express, { Application, Router } from "express";
 import "dotenv/config";
 import helmet from "helmet";
 import bodyParser from "body-parser";
+import { connectDb } from "./modules/shared/infrastructure/connection";
 
 export class Server {
   private app: Application;
@@ -16,6 +17,7 @@ export class Server {
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(helmet.xssFilter());
     this.app.use(helmet.noSniff());
+    connectDb(process.env.MONGODB_URL || "");
   }
 
   async listen(): Promise<void> {
