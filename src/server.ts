@@ -3,6 +3,7 @@ import "dotenv/config";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 import { connectDb } from "./modules/shared/infrastructure/connection";
+import { registerRoutes } from "./routes/router";
 
 export class Server {
   private app: Application;
@@ -11,12 +12,10 @@ export class Server {
   constructor() {
     this.port = process.env.PORT || "8080";
     this.app = express();
+    this.configureDefaultMiddlewares();
     const router = Router();
     this.app.use(router);
-    this.app.use(bodyParser.json());
-    this.app.use(bodyParser.urlencoded({ extended: true }));
-    this.app.use(helmet.xssFilter());
-    this.app.use(helmet.noSniff());
+    registerRoutes(router);
     connectDb(process.env.MONGODB_URL || "");
   }
 
@@ -27,5 +26,12 @@ export class Server {
         resolve();
       });
     });
+  }
+
+  private configureDefaultMiddlewares() {
+    this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(helmet.xssFilter());
+    this.app.use(helmet.noSniff());
   }
 }
