@@ -20,6 +20,42 @@ A **Product** has:
 
 This project was done using as database an instance of MongoDB.
 
+## Installation
+
+IMPORTANT! This project requires [Node.js](https://nodejs.org/) and MongoDB installed in your computer to run. 
+
+1. In the environment file located in the root of the project (.env.example) you have all the needed variables for starting the project. You will have to create your own .env with the values that work for you, and you might have to change some values of the database in order to connect to it.
+
+2. Requirements
+
+Run the following commands
+
+```bash
+$ nvm install 16
+$ nvm use
+$ npm i -g npm@8
+```
+
+3. Set up a local MongoDB instance in localhost. (Get the url and use it in the corresponding .env variable).
+
+### Commands
+
+For installing the modules, execute the following command:
+
+`npm install` 
+
+For building the project, execute the following command:
+
+`npm run build` 
+
+In order to run the project, execute the following command:
+
+`npm run start` 
+
+In order to run the tests, execute the following command:
+
+`npm run test` 
+
 ## Debugging
 
 ### VS Code
