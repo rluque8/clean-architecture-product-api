@@ -1,5 +1,7 @@
 import express, { Application, Router } from "express";
 import "dotenv/config";
+import helmet from "helmet";
+import bodyParser from "body-parser";
 
 export class Server {
   private app: Application;
@@ -10,6 +12,10 @@ export class Server {
     this.app = express();
     const router = Router();
     this.app.use(router);
+    this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(helmet.xssFilter());
+    this.app.use(helmet.noSniff());
   }
 
   async listen(): Promise<void> {
