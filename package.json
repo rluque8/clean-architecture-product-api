@@ -9,7 +9,7 @@
     "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "start": "node dist/src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --runInBand"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@faker-js/faker": "^6.3.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "glob": "^8.0.3",
