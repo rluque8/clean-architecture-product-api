@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/rluque8/fintonic-product-api#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
     "typescript": "^4.6.4"
   }
 }
