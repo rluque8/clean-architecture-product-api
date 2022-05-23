@@ -3,7 +3,7 @@ import "dotenv/config";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 import { connectDb } from "./modules/shared/infrastructure/connection";
-import { registerRoutes } from "./routes/router";
+import { registerRoutes } from "./routes";
 import swaggerUi from "swagger-ui-express";
 import * as swaggerDocument from "../swagger.json";
 

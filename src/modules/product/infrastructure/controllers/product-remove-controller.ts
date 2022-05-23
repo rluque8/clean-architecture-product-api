@@ -20,6 +20,8 @@ export class ProductRemoveController extends BaseController {
     } catch (error) {
       if (error instanceof Error) {
         res.status(HTTP_STATUS.INTERNAL_ERROR).json({ error: error.message });
+      } else {
+        res.status(HTTP_STATUS.INTERNAL_ERROR).json({ error: error });
       }
     }
   }

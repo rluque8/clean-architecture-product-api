@@ -33,9 +33,7 @@
     "@typescript-eslint/parser": "^5.25.0",
     "body-parser": "^1.20.0",
     "eslint": "^8.15.0",
-    "helmet": "^5.1.0",
     "jest": "^28.1.0",
-    "mongoose": "^6.3.4",
     "ts-jest": "^28.0.2",
     "typescript": "^4.6.4"
   },
@@ -43,8 +41,9 @@
     "@faker-js/faker": "^6.3.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "glob": "^8.0.3",
+    "helmet": "^5.1.0",
     "joi": "^17.6.0",
+    "mongoose": "^6.3.4",
     "swagger-ui-express": "^4.4.0"
   }
 }
