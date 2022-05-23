@@ -1,8 +1,8 @@
 {
-  "name": "fintonic-product-api",
+  "name": "clean-architecture-product-api",
   "version": "1.0.0",
   "author": "Rodrigo Luque",
-  "description": "Project for Fintonic's hiring process",
+  "description": "POC for a clean architecture project",
   "scripts": {
     "build": "npm run clean && npx tsc -b tsconfig.build.json --verbose",
     "clean": "rimraf ./dist",
@@ -13,16 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rluque8/fintonic-product-api.git"
+    "url": "git+https://github.com/rluque8/clean-architecture-product-api.git"
   },
   "keywords": [
     "node"
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rluque8/fintonic-product-api/issues"
+    "url": "https://github.com/rluque8/clean-architecture-product-api/issues"
   },
-  "homepage": "https://github.com/rluque8/fintonic-product-api#readme",
+  "homepage": "https://github.com/rluque8/clean-architecture-product-api#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/glob": "^7.2.0",

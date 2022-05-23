@@ -1,4 +1,4 @@
-# Fintonic Product Api
+# Clean Architecture Product Api
 
 
 ## Description

@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "Product API project for Fintonic",
+    "description": "Product API project with Clean Architecture",
     "version": "1.0.0",
     "title": "Product API",
     "termsOfService": "http://swagger.io/terms/",
