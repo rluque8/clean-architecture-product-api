@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { productCreateInteractor } from "./../../application/interactors/dependencies";
+import { productCreateInteractor } from "../dependencies";
 import { Response, Request } from "express";
 import { Product } from "../../domain/product";
 import { HTTP_STATUS } from "../../../shared/domain/http-status";

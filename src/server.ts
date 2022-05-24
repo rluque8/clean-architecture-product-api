@@ -1,11 +1,11 @@
-import express, { Application, Router } from "express";
+import express, { Application } from "express";
 import "dotenv/config";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 import { connectDb } from "./modules/shared/infrastructure/connection";
-import { registerRoutes } from "./routes";
 import swaggerUi from "swagger-ui-express";
 import * as swaggerDocument from "../swagger.json";
+import productRouter from "./routes/product-router";
 
 export class Server {
   private app: Application;
@@ -15,9 +15,7 @@ export class Server {
     this.port = process.env.PORT || "8080";
     this.app = express();
     this.configureDefaultMiddlewares();
-    const router = Router();
-    this.app.use(router);
-    registerRoutes(router);
+    this.registerRoutes();
     this.initSwagger();
     connectDb(process.env.MONGODB_URL || "");
   }
@@ -29,6 +27,10 @@ export class Server {
         resolve();
       });
     });
+  }
+
+  private registerRoutes() {
+    this.app.use("/v1/products", productRouter);
   }
 
   private initSwagger() {

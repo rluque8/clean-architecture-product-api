@@ -1,7 +1,7 @@
 import { Response, Request } from "express";
 import { HTTP_STATUS } from "../../../shared/domain/http-status";
 import { BaseController } from "../../../shared/domain/base-controller";
-import { productGetInteractor } from "../../application/interactors/dependencies";
+import { productGetInteractor } from "../dependencies";
 
 export class ProductGetController extends BaseController {
   async run(req: Request, res: Response): Promise<void> {

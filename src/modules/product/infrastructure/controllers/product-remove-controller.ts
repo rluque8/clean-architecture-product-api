@@ -2,7 +2,7 @@ import { Response, Request } from "express";
 import Joi from "joi";
 import { HTTP_STATUS } from './../../../shared/domain/http-status';
 import { BaseController } from "../../../shared/domain/base-controller";
-import { productRemoveInteractor } from "../../application/interactors/dependencies";
+import { productRemoveInteractor } from "../dependencies";
 
 export class ProductRemoveController extends BaseController {
   static schema() {
